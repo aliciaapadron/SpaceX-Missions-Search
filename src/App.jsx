@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Heading, Box, Image, Flex, Text, Spacer, Tag } from '@chakra-ui/react';
+import { HiCalendar } from 'react-icons/hi';
+import { v4 as uuidv4 } from 'uuid';
 import * as API from './services/launches';
 import logo from './assets/logo-spacex.png';
-import { v4 as uuidv4 } from 'uuid';
+import dayjs from 'dayjs';
+import 'dayjs/locale/es';
 
 export function App() {
   const [launches, setLaunches] = useState([]);
@@ -29,7 +32,14 @@ export function App() {
                 {launch.launch_success ? 'Success' : 'Failure'}
               </Tag>
             </Flex>
-            {launch.mission_name}({launch.launch_year})
+            <Flex align="center">
+              <HiCalendar />
+              <Text fontSize="sm" ml={1}>
+                {dayjs(launch.launch_data_local)
+                  .locale('es')
+                  .format('D MMMM, YYYY')}
+              </Text>
+            </Flex>
           </Box>
         ))}
       </section>

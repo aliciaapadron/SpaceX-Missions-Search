@@ -1,5 +1,7 @@
-import { Box, Flex, Text, Spacer, Tag, Button, Icon } from '@chakra-ui/react';
 import { HiCalendar } from 'react-icons/hi';
+import { Link } from 'react-router-dom';
+import { Box, Flex, Text, Spacer, Tag, Button, Icon } from '@chakra-ui/react';
+import { v4 as uuidv4 } from 'uuid';
 import dayjs from 'dayjs';
 
 export function LaunchItem(launch) {
@@ -20,7 +22,11 @@ export function LaunchItem(launch) {
           {dayjs(launch.launch_data_local).locale('es').format('D MMMM, YYYY')}
         </Text>
       </Flex>
-      <Button colorScheme="blue">More details</Button>
+      <Link to={`/launch/${uuidv4()}`}>
+        <Button colorScheme="blue" mt={2}>
+          More details
+        </Button>
+      </Link>
     </Box>
   );
 }

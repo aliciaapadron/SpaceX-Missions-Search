@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Box, Flex, Spacer, Tag, Text } from '@chakra-ui/react';
 import * as API from '../services/launches';
+import { Loader } from './Loader';
 
 export function LaunchDetails() {
   const [launch, setLaunch] = useState({});
@@ -12,7 +13,7 @@ export function LaunchDetails() {
   return (
     <Box bg="gray.100" p={4} m={4} borderRadius="lg">
       {!launch ? (
-        <div>Loading...</div>
+        <Loader></Loader>
       ) : (
         <>
           <Flex>

@@ -3,6 +3,7 @@ import { Heading } from '@chakra-ui/react';
 import { LaunchItem } from './LaunchItem';
 import { v4 as uuidv4 } from 'uuid';
 import * as API from '../services/launches';
+import { Loader } from './Loader';
 
 export function LaunchList() {
   const [launches, setLaunches] = useState([]);
@@ -15,7 +16,7 @@ export function LaunchList() {
         SpaceX Launches
       </Heading>
       {launches.length === 0 ? (
-        <div>Loading...</div>
+        <Loader></Loader>
       ) : (
         <section>
           {launches.map((launch) => (

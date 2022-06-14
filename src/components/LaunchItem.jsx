@@ -1,7 +1,6 @@
 import { HiCalendar } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 import { Box, Flex, Text, Spacer, Tag, Button, Icon } from '@chakra-ui/react';
-import { v4 as uuidv4 } from 'uuid';
 import dayjs from 'dayjs';
 import 'dayjs/locale/es';
 
@@ -24,7 +23,7 @@ export function LaunchItem(launch) {
           {dayjs(launch.launch_date_local).locale('es').format('D MMMM, YYYY')}
         </Text>
       </Flex>
-      <Link to={`/launch/${uuidv4()}`}>
+      <Link to={`/launch/${launch.id}`}>
         <Button mt={2} colorScheme="blue">
           More Details
         </Button>

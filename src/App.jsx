@@ -11,7 +11,6 @@ import { NotFoundPage } from './components/applications/NotFoundPage';
 import { getAllLaunches } from './services/launches';
 
 import { Routes, Route } from 'react-router-dom';
-import { matchPath, useLocation } from 'react-router-dom';
 
 import { useState, useEffect } from 'react';
 
@@ -28,7 +27,6 @@ export function App() {
       });
     }
   }, []);
-
   //useEffect para localStorage
   useEffect(() => {
     ls.set('rockets', dataRockets);
@@ -73,15 +71,8 @@ export function App() {
   //limpiar inputs
   const resetInputs = () => {
     setFilterRocket('');
-    console.log('entra');
   };
-  const { pathname } = useLocation();
-  const dataPath = matchPath('/launch/:launchId', pathname);
 
-  const rocketId = dataPath !== null ? dataPath.params.rocketId : null;
-  const rocketFound = dataRockets.find(
-    (item) => item.id === parseInt(rocketId)
-  );
   return (
     <>
       <Image m={4} src={logo} width={300} />
@@ -107,7 +98,7 @@ export function App() {
 
         <Route
           path="launch/:launchId"
-          element={<LaunchDetails rocket={rocketFound} />}
+          element={<LaunchDetails dataRockets={dataRockets} />}
         />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

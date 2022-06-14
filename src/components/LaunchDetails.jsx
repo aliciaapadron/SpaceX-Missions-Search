@@ -15,12 +15,13 @@ import * as API from '../services/launches';
 import { NotFoundPage } from './applications/NotFoundPage';
 import { Loader } from './Loader';
 
-export function LaunchDetails() {
+export function LaunchDetails(props) {
   const [launch, setLaunch] = useState({});
   const { launchId } = useParams();
   useEffect(() => {
-    API.getLaunchByFligthNumber(launchId).then(setLaunch).catch(console.log);
+    setLaunch(props.dataRockets.find((rocket) => rocket.id == launchId));
   }, [launchId]);
+
   if (launch.mission_name === undefined) {
     return <NotFoundPage />;
   }

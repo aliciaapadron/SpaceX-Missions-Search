@@ -1,5 +1,4 @@
 import { LaunchItem } from './LaunchItem';
-import { v4 as uuidv4 } from 'uuid';
 import { Loader } from './Loader';
 
 export function LaunchList(props) {
@@ -10,7 +9,7 @@ export function LaunchList(props) {
       ) : (
         <section>
           {props.rockets.map((launch) => (
-            <LaunchItem key={uuidv4()} {...launch} />
+            <LaunchItem key={launch.id} {...launch} />
           ))}
         </section>
       )}

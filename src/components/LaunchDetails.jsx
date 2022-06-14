@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { Box, Flex, Spacer, Tag, Text } from '@chakra-ui/react';
 import * as API from '../services/launches';
+import { NotFoundPage } from './applications/NotFoundPage';
+
 import { Loader } from './Loader';
 
 export function LaunchDetails() {
@@ -10,6 +12,9 @@ export function LaunchDetails() {
   useEffect(() => {
     API.getLaunchByFligthNumber(launchId).then(setLaunch).catch(console.log);
   }, [launchId]);
+  if (launch.mission_name === undefined) {
+    return <NotFoundPage />;
+  }
   return (
     <Box bg="gray.100" p={4} m={4} borderRadius="lg">
       {!launch ? (
@@ -53,6 +58,11 @@ export function LaunchDetails() {
                 See video
               </a>
             </nav>
+            <div className="div">
+              <Link className="divbtn__btn" to="/" title="Volver al inicio">
+                Back
+              </Link>
+            </div>
           </Box>
         </>
       )}

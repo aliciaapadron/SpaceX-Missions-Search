@@ -1,0 +1,20 @@
+.section {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  &__diverror {
+    border: 2px solid #2b6cb0;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 90px;
+
+    &--msn {
+      color: #2b6cb0;
+    }
+  }
+}

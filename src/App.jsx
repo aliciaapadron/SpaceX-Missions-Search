@@ -60,7 +60,7 @@ export function App() {
         <section className="section">
           <div className="section__diverror">
             <p className="section__diverror--msn">
-              Ups! 😅 "{filterRocket}" does not exist, try another movie.
+              Ups! 😅 "{filterRocket}" does not exist, try another rocket.
             </p>
           </div>
         </section>

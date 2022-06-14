@@ -99,7 +99,7 @@ export function App() {
                 resetInputs={resetInputs}
               />
               {searchRockets()}
-              <LaunchList />
+              <LaunchList rockets={rocketFilters} />
             </>
           }
         />

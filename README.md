@@ -20,7 +20,7 @@ En esta nueva pestaña además de algunos detalles podremos acceder a más infor
 
 ## Authors
 
-- [@aliciaapadron](https://github.com/aliciaapadron)
+[@aliciaapadron](https://github.com/aliciaapadron)
 
 ## Video
 Podéis seguir los vídeos de la explicación (sin las funcionalidades de filtro y sin la página de más detalles) de [@carlosazaustre](https://github.com/carlosazaustre/workshop-react) en el siguiente [enlace](https://www.youtube.com/watch?v=4AFOCAgywLc).

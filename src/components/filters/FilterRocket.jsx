@@ -2,6 +2,7 @@ import { Input } from '../applications/Input';
 import { HiSearch } from 'react-icons/hi';
 import { Icon } from '@chakra-ui/react';
 export function FilterRocket(props) {
+  console.log(props);
   return (
     <fieldset className="fieldset">
       <Icon as={HiSearch} color="gray.500" className="search" />

@@ -5,8 +5,12 @@ export const ResetButton = (props) => {
   };
   return (
     <>
-      <div className="divbtn">
-        <button title="Reset" className="divbtn__btn" onClick={handleResetBtn}>
+      <div className="resetbtn">
+        <button
+          title="Reset"
+          className="resetbtn__btn"
+          onClick={handleResetBtn}
+        >
           Reset
         </button>
       </div>

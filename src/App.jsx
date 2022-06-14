@@ -73,6 +73,7 @@ export function App() {
   //limpiar inputs
   const resetInputs = () => {
     setFilterRocket('');
+    console.log('entra');
   };
   const { pathname } = useLocation();
   const dataPath = matchPath('/launch/:launchId', pathname);

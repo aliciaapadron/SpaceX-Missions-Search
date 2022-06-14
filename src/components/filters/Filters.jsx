@@ -7,7 +7,7 @@ export function Filters(props) {
       <form className="form" onSubmit={props.handleSubmit}>
         <FilterRocket
           handleFilterRocket={props.handleFilterRocket}
-          FilterRocket={props.FilterRocket}
+          filterRocket={props.filterRocket}
         />
         <ResetButton resetInputs={props.resetInputs} />
       </form>

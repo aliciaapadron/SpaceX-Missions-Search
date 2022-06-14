@@ -25,3 +25,4 @@ En esta nueva pestaña además de algunos detalles podremos acceder a más infor
 ## Video
 Podéis seguir los vídeos de la explicación (sin las funcionalidades de filtro y sin la página de más detalles) de [@carlosazaustre](https://github.com/carlosazaustre/workshop-react) en el siguiente [enlace](https://www.youtube.com/watch?v=4AFOCAgywLc).
 
+![image](https://user-images.githubusercontent.com/99482526/173658191-72562a48-918d-4cb8-8b12-918ffa4e66f8.png)
